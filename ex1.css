@@ -2,10 +2,10 @@
   width: 75px;
   height: 126px;
   background: url("Xanxusprite2.png");
-  animation: run 1s steps(9) forwards, h 0s linear 1s infinite forwards;
+  animation: run 1s steps(9) forwards, h 0s linear 1.5s infinite forwards;
   position: absolute;
-  left: 600px;
-  top: 460px;
+  left: 1200px;
+  top: 700px;
 }
 
 .tsuna {
@@ -14,66 +14,107 @@
   background: url("Tsunasprite1.png");
   animation: run2 1s steps(11), h 0s linear 1s infinite forwards;
   position: absolute;
-  left: 180px;
-  top: 476px;
+  left: 600px;
+  top: 700px;
 }
 
 .tsunattack {
   width: 125px;
   height: 136px;
   background: url("Tsunaattack.png");
-  animation: h 0s linear 0s infinite forwards, a 0s linear 1s infinite forwards, attack 1s steps(14) 1s, out 1s linear 1s forwards;
+  animation: h 0s linear 0s infinite forwards, a 0s linear 1s infinite forwards, attack 1s steps(14) 1s 1 forwards, h 0s linear 2s infinite forwards;
   position: absolute;
-  left: 190px;
-  top: 482px;
+  left: 600px;
+  top: 750px;
+}
+
+.tsunajump {
+  width: 65px;
+  height: 95px;
+  background: url("Tsunajump.png");
+  animation: h 0s linear 0s infinite forwards, a 0s linear 2s infinite forwards, tsunajumpup 0.75s steps(7) 2s 1 forwards, tsunajumpdown 0.75s steps(7) 2.75s 1 forwards, h 0s linear 3.5s infinite forwards;
+  position: absolute;
+  left: 1200px;
+  top: 750px;
+}
+
+.tsunastay {
+  width: 65px;
+  height: 90px;
+  background: url("Tsunastay.png");
+  animation: h 0s linear 0s infinite forwards, a 0s linear 3.5s infinite forwards, tsunastay 0.5s steps(6) 3.5s 1 forwards , h 0s linear 4s infinite forwards;
+  position: absolute;
+  left: 600px;
+  top: 750px;
 }
 
 .xanxusjump {
   width: 100px;
-  height: 180px;
+  height: 400px;
   background-image: url("Xanxusjump.png");
-  animation: h 0s linear 0s infinite forwards, a 0s linear 1s infinite forwards, jump 1s steps(8) 1s 1 forwards, h 0s linear 2s infinite forwards;
+  animation: h 0s linear 0s infinite forwards, a 0s linear 1.5s infinite forwards, jump 1.5s steps(10) 1.5s 1 forwards, h 0s linear 3s infinite forwards;
   position: absolute;
-  left: 600px;
-  top: 420px;
+  left: 1200px;
+  top: 500px;
 }
 
 .xanxusattack {
 width: 130px;
 height: 130px;
 background-image: url("Xanxusattack.png");
-animation: h 0s linear 0s infinite forwards, a 0s linear 2s infinite forwards, attack2 1s steps(11) 2s 1 forwards;
+animation: h 0s linear 0s infinite forwards, a 0s linear 3s infinite forwards, attack2 1s steps(11) 3s 1 forwards, h 0s linear 4s infinite forwards;
 position: absolute;
-left: 565px;
-top: 470px;
+left: 1150px;
+top: 750px;
 }
 
 .xanxusflame {
   width: 100px;
   height: 110px;
   background-image: url("Xanxusflame.png");
-  animation: h 0s linear 0s infinite forwards, a 0s linear 2s infinite forwards, xanxusflame 0.9s steps(7) 2s 1 forwards;
+  animation: h 0s linear 0s infinite forwards, a 0s linear 3s infinite forwards, xanxusflame 0.9s steps(7) 3s 1 forwards, h 0s linear 3.9s infinite forwards;
   position: absolute;
-  left: 555px;
-  top: 470px;
+  left: 1200px;
+  top: 750px;
 }
 
 .tsunablock {
-  width: 300px;
-  height: 125px;
+  width: 60px;
+  height: 90px;
   background-image: url("Tsunablock.png");
-  animation: h 0s linear 0s infinite forwards, a 3s linear 2s infinite forwards, tsunablock 1s steps (3) 1s 1 forwards;
+  animation: h 0s linear 0s infinite forwards, a 0s linear 3.8s infinite forwards, tsunablock 0.3s steps(3) 3.8s 1 forwards, h 0s linear 4.1s infinite forwards;
   position: absolute;
-  left: 190px;
-  top: 482px;
+  left: 600px;
+  top: 750px;
 }
+
+.tsunadie {
+  width: 95px;
+  height: 100px;
+  background-image: url("Tsunadie.png");
+  animation: h 0s linear 0s infinite forwards, a 0s linear 4.1s infinite forwards, tsunadie 1s steps(10) 4.1s 1 forwards;
+  position: absolute;
+  left: 600px;
+  top: 750px;
+}
+
+.xanxusstay {
+  width: 90px;
+  height: 100px;
+  background-image: url("Xanxusstay.png");
+  animation: h 0s linear 0s infinite forwards, a 0s linear 4s infinite forwards, xanxusstay 1.5s steps(5) 4s 1 forwards;
+  position: absolute;
+  left: 1200px;
+  top: 750px;
+}
+
 
 @keyframes run {
     100% { background-position: -675px; }
 }
 
 @keyframes jump {
-    100% { background-position: -800px; }
+    100% { background-position: -1000px; }
 }
 
 @keyframes out {
@@ -84,8 +125,25 @@ top: 470px;
     100% { background-position: -1650px;}
 }
 
+
+@keyframes tsunajumpup{
+  100% {background-position: -455px;}
+  from { left: 1200px; top: 750px;}
+  to { left: 900px; top: 500px; }
+
+}
+
+@keyframes tsunajumpdown{
+  100% {background-position: -455px;}
+  from { left: 900px; top: 500px;}
+  to { left: 600px; top: 750px; }
+
+}
+
 @keyframes attack {
     100% { background-position: -1750px;}
+    from { left: 600px; top: 720px;}
+    to { left: 1400px; top: 720px; }
 }
 
 @keyframes attack2 {
@@ -94,13 +152,24 @@ top: 470px;
 
 @keyframes xanxusflame {
     100% { background-position: -700px;}
-    from { left: 555px; }
-    to { left: 415px; }
+    from { left: 1200px; }
+    to { left: 550px; }
 }
 
 @keyframes tsunablock {
-  100% { background-position: -300px;}
+  100% { background-position: -180px;}
 }
+
+@keyframes tsunadie {
+  100% { background-position: -950px;}
+  from { left: 600px; }
+  to { left: 300px; }
+}
+
+@keyframes xanxusstay {
+  100% { background-position: -450px;}
+}
+
 
 @keyframes a {
   from { opacity: 0; visibility: hidden; }
@@ -115,6 +184,4 @@ top: 470px;
 body {
 background-image: url("background.png");
 background-repeat: no-repeat;
-background-size: 920px;
-position: relative;
 }
